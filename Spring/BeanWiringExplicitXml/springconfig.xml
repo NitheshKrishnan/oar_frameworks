@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="edu.jspiders.beanwiringexplicitxml.beans.Address" id="address">
+		<constructor-arg name="houseNumber" value="007"/>
+		<constructor-arg name="apartmentName" value="Wayne Towers"/>
+		<constructor-arg name="street" value="Batcave"/>
+		<constructor-arg name="locality" value="Gotham City"/>
+		<constructor-arg name="pincode" value="001"/>
+	</bean>
+	
+	<bean class="edu.jspiders.beanwiringexplicitxml.beans.Student" id="student">
+		<constructor-arg name="id" value="001"/>
+		<constructor-arg name="name" value="Bruce Wayne"/>
+		<constructor-arg name="gender" value="Male"/>
+		<constructor-arg name="marks" value="98.7"/>
+		<constructor-arg name="addr" ref="address"/>
+	</bean>
+
+
+	<!-- <bean class="edu.jspiders.beanwiringexplicitxml.beans.Address" id="address">
+		<property name="houseNumber" value="007"/>
+		<property name="apartmentName" value="Wayne Towers"/>
+		<property name="street" value="Batcave"/>
+		<property name="locality" value="Gotham City"/>
+		<property name="pincode" value="001"/>
+	</bean>
+	
+	<bean class="edu.jspiders.beanwiringexplicitxml.beans.Student" id="student">
+		<property name="id" value="001"/>
+		<property name="name" value="Bruce Wayne"/>
+		<property name="gender" value="Male"/>
+		<property name="marks" value="98.7"/>
+		<property name="addr" ref="address"/>
+	</bean> -->
+
+
+	
+</beans>
